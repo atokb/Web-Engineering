@@ -13,9 +13,9 @@ $currentPage = 'home';
   <title>King FiiIV</title>
 </head>
 <body>
-  <?php
+  <!-- <?php
     include('navigation.php');
-  ?>
+  ?> -->
   <div class="jumbotron">
       <h1>Akwaaba(Welcome)</h1>
       <hr>
@@ -29,6 +29,10 @@ $currentPage = 'home';
             I therefore saw the web as an option which would be a future benefit; since it's possibilities such as web apps, e-commerce, API's etc, has not really been explored much in Ghana.<br>
             Listening to music, dancing, playing soccer, running, singing, and exploring new things are some of the things I love to do, when I get some time away from coding.
         </p>
+        <p>
   </div>
+  <?php
+  include('navigation.php');
+  ?>
 </body>
 </html>
