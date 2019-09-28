@@ -17,6 +17,7 @@ $currentPage = 'home';
     include('header.php');
   ?>
   <div class="jumbotron">
+    <div>
       <h1>Akwaaba(Welcome)</h1>
       <hr>
         <img class="image" src="/files/me.JPG" alt="myself">
@@ -29,9 +30,12 @@ $currentPage = 'home';
             I therefore saw the web as an option which would be a future benefit; since it's possibilities such as web apps, e-commerce, API's etc, has not really been explored much in Ghana.<br>
             Listening to music, dancing, playing soccer, running, singing, and exploring new things are some of the things I love to do, when I get some time away from coding.
         </p>
+    </div>
+    <div>
         <?php
         include('navigation.php');
         ?>
+    </div>
   </div>
 </body>
 </html>
