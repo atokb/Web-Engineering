@@ -17,3 +17,7 @@ p:first-letter {
 .image:hover {
     transition: width 30rem;
 }
+
+.btn-space {
+    margin-right: 5px;
+}
