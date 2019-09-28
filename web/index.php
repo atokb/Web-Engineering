@@ -22,10 +22,11 @@ $currentPage = 'home';
         <img class="image" src="/files/me.JPG" alt="myself">
         <h3>Who I Am</h3>
         <p>
+            My name is Kenneth Ato Brown<br>
             I started studying Web Development after I enrolled in BYU-Idaho's online program; which was made possible through BYU-Pathway<br>
-            My interest in the web came as a result of my desire to pursue a degree that would allow me work remotely, without having to be Software Development related.<br>
+            My interest in the web came as a result of my desire to pursue a degree that would allow me work remotely, and my realization of how I analyzed websites I visited and thought of how they could be improved.<br>
             In Ghana; where I come from, many people love using technology, but most people gear towards software or computer science, because of the current demand.<br>
-            I therefore saw the web as an option which would be a future benefit; since it's possibilities such as web apps, e-commerce, API's etc, has not really been explored in Ghana.<br>
+            I therefore saw the web as an option which would be a future benefit; since it's possibilities such as web apps, e-commerce, API's etc, has not really been explored much in Ghana.<br>
             Listening to music, dancing, playing soccer, running, singing, and exploring new things are some of the things I love to do, when I get some time away from coding.
         </p>
   </div>

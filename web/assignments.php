@@ -14,14 +14,14 @@ $currentPage = 'projects';
 <body>
     <header>
     <?php
-        include('header.php');
+        include('navigation.php');
     ?>
   </header>
 
 <div class="jumbotron">
-    <h1>We are Up!!!</h1>
+<hr>
+    <h1>Ye re ba(We are coming)</h1>
     <div>
-    <a href="soak/soak.php" target="_blank">Workout Routine App</a>
     </div>
 </div>
 
