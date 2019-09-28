@@ -1,0 +1,19 @@
+div h1:hover {
+    content: 'Hover over my picture';
+}
+
+p:first-letter {
+    font: bold 3em / .5 serif;
+    color: #3f51b5;
+}
+
+.image {
+    width: 11rem;
+    float: left;
+    padding: 15px;
+    /* overflow: auto; */
+}
+
+.image:hover {
+    transition: width 30rem;
+}
