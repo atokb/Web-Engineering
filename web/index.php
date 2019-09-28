@@ -13,9 +13,9 @@ $currentPage = 'home';
   <title>King FiiIV</title>
 </head>
 <body>
-  <!-- <?php
-    include('navigation.php');
-  ?> -->
+  <?php
+    include('header.php');
+  ?>
   <div class="jumbotron">
       <h1>Akwaaba(Welcome)</h1>
       <hr>
