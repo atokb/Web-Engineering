@@ -1,6 +1,8 @@
 <?php
-$currentPage = 'projects';
+$currentPage = 'assignments';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -14,7 +16,7 @@ $currentPage = 'projects';
 <body>
     <header>
     <?php
-        include('navigation.php');
+        include('header.php');
     ?>
   </header>
 
