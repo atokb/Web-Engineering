@@ -18,7 +18,7 @@ $currentPage = 'home';
   ?>
   <div class="jumbotron">
     <div>
-      <h1>Akwaaba(Welcome)</h1>
+      <h1>Akwaaba (Welcome)</h1>
       <hr>
         <img class="image" src="/files/me.JPG" alt="myself">
         <h3>Who I Am</h3>
