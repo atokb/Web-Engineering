@@ -19,8 +19,13 @@ div h1:hover {
     padding: 15px;
 }
 
-.intro {
+.jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/web/files/me.JPG");
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .image:hover {
