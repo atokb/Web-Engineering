@@ -21,3 +21,7 @@ p:first-letter {
 .btn-space {
     margin-right: 5px;
 }
+
+.navdiv {
+    margin: 0 auto;
+}
