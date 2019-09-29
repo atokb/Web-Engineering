@@ -23,7 +23,11 @@ $currentPage = 'assignments';
 <div class="jumbotron">
 <hr>
     <h1>Ye re ba(We are coming)</h1>
+    <hr>
     <div>
+    <?php
+        include('navigation.php');
+        ?>
     </div>
 </div>
 
