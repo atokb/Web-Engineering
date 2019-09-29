@@ -17,7 +17,7 @@ $currentPage = 'home';
     include('header.php');
   ?>
   <div class="jumbotron">
-    <div>
+    <div class="intro">
       <h1>Akwaaba (Welcome)</h1>
       <hr>
         <img class="image" src="/files/me.JPG" alt="myself">
