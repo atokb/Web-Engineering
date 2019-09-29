@@ -7,6 +7,11 @@ p:first-letter {
     color: #3f51b5;
 }
 
+#name {
+    font: bold 2em / .5 sans-serif;
+    color: #D4AF37;
+}
+
 .image {
     width: 11rem;
     float: left;
