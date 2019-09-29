@@ -20,7 +20,7 @@ div h1:hover {
 }
 
 .jumbotron {
-    background-image: url("../files/me.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../files/me.JPG");
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
