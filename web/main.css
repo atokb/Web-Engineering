@@ -29,7 +29,7 @@ div h1:hover {
 }
 
 .intro-text {
-    text-align: center;
+    width: 400px;
     color: white;
 }
 
