@@ -2,13 +2,14 @@ div h1:hover {
     content: 'Hover over my picture';
 }
 
-p:first-letter {
+
+/* p:first-letter {
     font: bold 3em / .5 serif;
     color: #3f51b5;
-}
+} */
 
 #name {
-    font: bold 2em / .5 sans-serif;
+    font: bold 1.5em / .3 sans-serif;
     color: #D4AF37;
 }
 
@@ -28,5 +29,5 @@ p:first-letter {
 }
 
 .navbar-brand {
-    font-size: 100px;
+    font-size: 80px;
 }
