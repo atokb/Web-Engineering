@@ -18,11 +18,10 @@ $currentPage = 'home';
   ?>
   <div class="jumbotron">
     <div class="intro">
-      <h1>Akwaaba (Welcome)</h1>
-      <hr>
+      <h1 class="intro-text">Akwaaba (Welcome)</h1>
         <img class="image" src="/files/me.JPG" alt="myself">
-        <h3>Who I Am</h3>
-        <p>
+        <h3 class="intro-text">Who I Am</h3>
+        <p class="intro-text">
             My name is <span id="name">Kenneth Ato Brown</span><br>
             I started studying Web Development after I enrolled in BYU-Idaho's online program; which was made possible through BYU-Pathway<br>
             My interest in the web came as a result of my desire to pursue a degree that would allow me work remotely, and my realization of how I analyzed websites I visited and thought of how they could be improved.<br>
