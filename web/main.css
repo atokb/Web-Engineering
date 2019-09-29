@@ -25,3 +25,7 @@ p:first-letter {
 .navdiv {
     margin: 0 auto;
 }
+
+.nav-brand {
+    font-size: 100px;
+}
