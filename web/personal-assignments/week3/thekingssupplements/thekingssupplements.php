@@ -18,8 +18,15 @@
         ?>
     </header>
 
-    <?php include('products.php');
+    <?php 
+    
+    include("products.php");
     echo $products;
+
+    $images = array("lean-sassy", "Scorched", "Ignitor", "Hex-", "Femme-Fit", "Grow");
+    foreach(images as image) {
+        echo "<img src='/img/$image.jpg'> <br>";
+    }
     ?>
 
 
