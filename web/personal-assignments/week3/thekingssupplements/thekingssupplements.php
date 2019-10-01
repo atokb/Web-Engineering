@@ -19,6 +19,7 @@
     </header>
 
     <?php include('products.php');
+    echo $products;
     ?>
 
 
