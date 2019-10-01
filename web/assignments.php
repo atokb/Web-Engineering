@@ -22,8 +22,11 @@ $currentPage = 'assignments';
 
 <div class="jumbotron">
 <hr>
-    <h1>Ye re ba(We are coming)</h1>
+    <h1>Y3 Wo Ha (We are Here)</h1>
     <hr>
+    <div>
+      <a href="/personal-assignments/week3/thekingssupplements/thekingssupplements.php">The King's Supplements</a>
+    </div>
     <div>
     <?php
         include('navigation.php');

@@ -1,5 +1,6 @@
 <?php 
     SESSION_START();
+    $currentPage = 'supplementHome';
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,8 @@
 
     <?php include('products.php');
     ?>
+
+    
    
 </body>
 </html>
