@@ -18,5 +18,6 @@
 
     <?php include('products.php');
     ?>
+   
 </body>
 </html>
