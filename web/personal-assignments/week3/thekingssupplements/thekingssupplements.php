@@ -23,9 +23,7 @@
    <?php 
         for ($i=0; $i < count($items); $i++) {
    ?>
-    <ul>
-        <?php echo "<li>$items[$i]</li><br>"; ?>
-    </ul>
+        <?php echo "<ul><li>$items[$i]</li><br></ul>"; ?>
    </div>
 </body>
 </html>

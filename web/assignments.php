@@ -25,7 +25,7 @@ $currentPage = 'assignments';
     <h1>Y3 Wo Ha (We are Here)</h1>
     <hr>
     <div>
-      <a href="/personal-assignments/week3/thekingssupplements/thekingssupplements.php">The King's Supplements</a>
+      <a href="web/personal-assignments/week3/thekingssupplements/thekingssupplements.php">The King's Supplements</a>
     </div>
     <div>
     <?php
