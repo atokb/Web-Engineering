@@ -16,14 +16,13 @@
     <title>The King's Supplements</title>
 </head>
 <body class="jumbotron">
-        <!-- <?php include('header.php');
-        ?> -->
+        <?php include('header.php');
+        ?>
    <div>
    <h2>Products</h2>
-   <!-- <?php 
+   <?php 
         for ($i=0; $i < count($items); $i++) {
-   ?>
-        <?php echo "<ul><li>$items[$i]</li><br></ul>"; ?> -->
+          echo "<ul><li>$items[$i]</li><br></ul>"; ?>
    </div>
 </body>
 </html>
