@@ -20,10 +20,10 @@
         ?>
    <div>
    <h2>Products</h2>
-   <?php 
+   <!-- <?php 
         for ($i=0; $i < count($items); $i++) {
    ?>
-        <?php echo "<ul><li>$items[$i]</li><br></ul>"; ?>
+        <?php echo "<ul><li>$items[$i]</li><br></ul>"; ?> -->
    </div>
 </body>
 </html>
