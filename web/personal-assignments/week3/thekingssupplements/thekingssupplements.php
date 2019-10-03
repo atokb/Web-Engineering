@@ -16,8 +16,8 @@
     <title>The King's Supplements</title>
 </head>
 <body class="jumbotron">
-        <?php include('header.php');
-        ?>
+        <!-- <?php include('header.php');
+        ?> -->
    <div>
    <h2>Products</h2>
    <!-- <?php 
