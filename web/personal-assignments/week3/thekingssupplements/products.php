@@ -1,10 +1,9 @@
 <?php 
     $items = array("LEAN N' SASSY", "SCORCHED", "IGNITOR", "HEX 6000 CREATINE", "FEMME FIT", "GROW MASS GAINER");
     $images = array("lean-sassy", "Scorched", "Ignitor", "Hex-", "Femme-Fit", "Grow");
-    foreach(images as image) {
-        echo "<img src='/img/$image.jpg'> <br>";
-    }
-    $price = array("$59.95", "$54.95", "$60", "$34.95", "$69.95", "$79.95");
+    // foreach (images as image)
+    //     echo "<img src='/img/$image.jpg'> <br>";
+    $price = array("59.95", "54.95", "60", "34.95", "69.95", "79.95");
 
     //Load Session
 if (!isset($_SESSION["total"]) ) {

@@ -1,0 +1,10 @@
+.products li {
+    list-style-type: none;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+}

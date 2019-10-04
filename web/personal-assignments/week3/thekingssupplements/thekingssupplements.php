@@ -18,11 +18,24 @@
 <body class="jumbotron">
         <?php include('header.php');
         ?>
-   <div>
+     <hr>
+   <div class="products">
    <h2>Products</h2>
    <?php 
         for ($i=0; $i < count($items); $i++) {
-          echo "<ul><li>$items[$i]</li><br></ul>"; ?>
+     ?>
+          <ul>
+          <li><?php echo($items[$i]) . " $" . ($price[$i])?></li>
+          <br>
+          <a class="btn btn-primary btn-sm btn-space role="button" aria-pressed="true" href="?add=<?php echo($i); ?>">Purchase</a>
+          </ul>        
+     <?php
+        }
+     ?>
+   </div>
+   <hr>
+   <div>
+     <a class='btn btn-info btn-sm btn-space role='button' aria-pressed='true'' href="cart.php">View Cart</a>  
    </div>
 </body>
 </html>
