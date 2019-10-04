@@ -42,13 +42,13 @@
         <tr>
           <td><?php echo( $items[$_SESSION["cart"][$i]] ); ?></td>
           <td>&nbsp;</td>
-          <td><?php echo( $_SESSION["images"][$i] ); ?></td>
+          <!-- <td><?php echo( $_SESSION["images"][$i] ); ?></td> -->
           <td>&nbsp;</td>
           <td><?php echo( $_SESSION["qty"][$i] ); ?></td>
           <td>&nbsp;</td>
           <td><?php echo( $_SESSION["price"][$i] ); ?></td>
           <td>&nbsp;</td>
-          <td><a class='btn btn-danger btn-sm btn-space role='button' aria-pressed='true' href="?delete=<?php echo($i); ?>">Delete from cart</a></td>
+          <td><a class='btn btn-danger btn-sm btn-space role='button' aria-pressed='true' href="?delete=<?php echo($i); ?>">Remove</a></td>
         </tr>
         <?php
         $total = $total + $_SESSION["price"][$i];

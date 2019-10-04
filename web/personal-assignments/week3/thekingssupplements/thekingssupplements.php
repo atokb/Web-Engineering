@@ -25,7 +25,7 @@
         for ($i=0; $i < count($items); $i++) {
      ?>
           <ul class="list-group">
-          <li class="list-group-item"><?php echo($items[$i]) . " $" . ($price[$i])?></li>
+          <li class="list-group-item"><?php echo ($images[$i]) . '<br><p class="h2">' .($items[$i]) . ' $' . ($price[$i]) . '</p>'?></li>
           <br>
           <li>
           <a class="btn btn-primary btn-sm btn-space" role="button" aria-pressed="true" href="?add=<?php echo($i); ?>">Purchase</a>Qty in Cart <?php echo( $_SESSION["qty"][$i] ); ?>
