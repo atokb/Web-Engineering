@@ -7,33 +7,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" href="../../../bootstrap.min.css">
-    <title>The King's Supplements</title>
-</head>
+<?php 
+    include('head.php');
+?>
 <body class="jumbotron">
         <?php include('header.php');
         ?>
-     <hr>
    <div class="products">
    <h2>Products</h2>
+   <ul class="list-group list-inline">
    <?php 
         for ($i=0; $i < count($items); $i++) {
      ?>
-          <ul class="list-group">
-          <li class="list-group-item"><?php echo ($images[$i]) . '<br><p class="h2">' .($items[$i]) . ' $' . ($price[$i]) . '</p>'?></li>
+          
+          <li class="list-group-item list-inline-item"><?php echo ($images[$i]) . '<br><p class="h5">' .($items[$i]) . '<br> $' . ($price[$i]) . '</p>'?>
           <br>
-          <li>
-          <a class="btn btn-primary btn-sm btn-space" role="button" aria-pressed="true" href="?add=<?php echo($i); ?>">Purchase</a>Qty in Cart <?php echo( $_SESSION["qty"][$i] ); ?>
-        </li>
-          </ul>        
+          <span class="qty-style">Qty in Cart <?php echo( $_SESSION["qty"][$i] ); ?> </span>
+          <br>
+          <a class="btn btn-primary btn-sm btn-space" role="button" aria-pressed="true" href="?add=<?php echo($i); ?>">Purchase</a> 
+          </li>
+          <br>
+               
      <?php
         }
      ?>
+     
    </div>
    <hr>
    <div>
