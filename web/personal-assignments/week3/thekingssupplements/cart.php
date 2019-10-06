@@ -17,7 +17,7 @@
   </head>
   <body class="jumbotron">
     <?php
-    include('header.php');
+    include('kingsheader.php');
     if ( isset($_SESSION["cart"]) ) {
     ?>
     <div class="cart">

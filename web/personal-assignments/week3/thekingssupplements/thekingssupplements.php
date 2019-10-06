@@ -11,7 +11,7 @@
     include('head.php');
 ?>
 <body class="jumbotron">
-        <?php include('header.php');
+        <?php include('kingsheader.php');
         ?>
    <div class="products">
    <h2>Products</h2>

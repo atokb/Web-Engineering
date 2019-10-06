@@ -19,7 +19,7 @@ include('customer-info.php');
   </head>
   <body class="jumbotron">
     <?php
-    include('header.php');
+    include('kingsheader.php');
     ?>
     <?php
     if ( isset($_SESSION["cart"]) ) {
