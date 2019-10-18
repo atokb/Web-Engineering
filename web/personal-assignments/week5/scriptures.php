@@ -28,7 +28,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         </h3> -->
         <?php foreach ($db->query('
         SELECT * FROM scriptures') as $row) {
-            print "$row[1] $row[2]:$row[3]<br> <i>$row[4]</i><br><br>";
+            print "<strong>$row[1] $row[2]:$row[3] - </strong> \"$row[4]\"<br><br>";
         }
         ?>
     </div>
