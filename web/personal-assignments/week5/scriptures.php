@@ -18,6 +18,12 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 </head>
 <body>
     <h1>Scripture Resources</h1>
+    <h3>Search By Book</h3> 
+    <form method="post" action="search.php?go" id="searchform">
+        <input type="text" name="name"> 	      
+        <input type="submit" name="submit" value="Search"> 	    
+    </form>
+    <hr> 
     <div>
         <!-- <h3>
             <?php
