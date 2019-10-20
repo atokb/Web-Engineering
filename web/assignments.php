@@ -26,6 +26,7 @@ $currentPage = 'assignments';
     <hr>
     <div>
       <a class="btn btn-primary btn-lg btn-space role="button" aria-pressed="true"" href="./personal-assignments/week3/thekingssupplements/thekingssupplements.php">The King's Supplements</a>
+      <a class="btn btn-primary btn-lg btn-space role="button" aria-pressed="true"" href="./personal-assignments/soak/soak.php">Strength of a King</a>
     </div>
     <hr>
     <div>
