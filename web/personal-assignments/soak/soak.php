@@ -44,7 +44,7 @@ if(count($_POST)>0) {
   <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="post" action="soak_start.php">
+				<form class="login100-form" method="post" action="soak_start.php">
 					<span class="login100-form-title p-b-26">
 						Login Here
 					</span>
@@ -52,13 +52,13 @@ if(count($_POST)>0) {
 						<i class="zmdi zmdi-font"></i>
 					</span>
 					<div class="message"><?php if($message!="") { echo $message; } ?></div>
-					<div class="wrap-input100 validate-input">
+					<div class="wrap-input100">
 					<!-- <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c"> -->
 						<input class="input100" type="text" name="email" required>
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
+					<div class="wrap-input100">
 					<!-- <div class="wrap-input100 validate-input" data-validate="Enter password"> -->
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
