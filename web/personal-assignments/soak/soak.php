@@ -5,15 +5,16 @@ session_start();
 
 include 'db.php';
 
-if (isset($_POST['firstName']))
-{
-	$firstname = $_POST['firstName'];
-	$lastname = $_POST['lastName'];
-	$email = $_POST['email'];
-	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-
-$stmt = $db->prepare('INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
-$stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':email' => $email, ':password' => $pass));
+$message="";
+if(count($_POST)>0) {
+	$conn = mysqli_connect("localhost","root","","phppot_examples");
+	$result = mysqli_query($conn,"SELECT * FROM users WHERE user_name='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
+	$count  = mysqli_num_rows($result);
+	if($count==0) {
+		$message = "Invalid Username or Password!";
+	} else {
+		$message = "You are successfully authenticated!";
+	}
 }
 ?>
 
@@ -50,7 +51,7 @@ $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':e
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
 					</span>
-
+					<div><?php $message ?></div>
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email" required>
 						<span class="focus-input100" data-placeholder="Email"></span>
