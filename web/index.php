@@ -19,7 +19,7 @@ $currentPage = 'home';
   <div class="jumbotron">
     <div class="intro">
       <h1 class="intro-text">Akwaaba (Welcome)</h1>
-        <img class="image" src="/files/me0.JPG" alt="myself">
+        <img class="image" src="/files/me0.png" alt="myself">
         <h3 class="intro-text">Who I Am</h3>
         <p class="intro-text">
             My name is <span id="name">Kenneth Ato Brown</span><br>
