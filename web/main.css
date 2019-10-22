@@ -25,6 +25,7 @@ div h1:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 570px;
     position: relative;
 }
 
