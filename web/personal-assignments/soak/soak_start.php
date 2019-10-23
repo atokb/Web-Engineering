@@ -3,7 +3,7 @@ session_start();
 
 $currentPage = 'soak-start';
 
-include('db.php');
+include 'db.php';
 
 if (isset($_POST['email']))
 {
@@ -16,9 +16,8 @@ $rows = $stmt->fetch(PDO::FETCH_ASSOC);
 
 foreach ($rows as $row) {
     if (password_verify($pass, $row['password'])) {
-        $_SESSION['email'] = $email;   
-        session_write_close();
-        header('Location:soak_start.php'); 
+        $_SESSION['email'] = $email;
+        
     }
     else {
         header('Location: soak.php');
