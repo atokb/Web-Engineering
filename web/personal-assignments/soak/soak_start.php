@@ -10,7 +10,7 @@ include('db.php');
 $email = $_POST['email'];
 $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-$stmt = $db->prepare('SELECT email, "password", CONCAT(first_name . last_name) AS name FROM users WHERE email=:email');
+$stmt = $db->prepare('SELECT email, "password", CONCAT(first_name . last_name) AS "name" FROM users WHERE email=:email');
 $stmt->execute(array(':email' => $email));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
