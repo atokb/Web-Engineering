@@ -72,11 +72,6 @@ else {
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Weight Category">
                                     <label for="sel1">Weight Category</label>
                                     <select id="sel1" class="form-control" type="text" name="weight_category"> 
-                                        <!-- <option value="weight_category">Indicate your Weight Category</option>
-                                        <option value="120-150">120 - 150</option>
-                                        <option value="150-180">150 - 180</option>
-                                        <option value="180-200">180 - 200</option>
-                                        <option value="200+">200+</option> -->
                                         <?php $statement = $db->query('SELECT * FROM weight_category');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
