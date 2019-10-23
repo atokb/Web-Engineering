@@ -39,7 +39,7 @@ if($stmt->rowCount() > 0 ) {
     }
 }
 else {
-    header('Location:soak.php')
+    header('Location:soak.php');
 }
 
 ?>
