@@ -72,10 +72,10 @@ else {
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Weight Category">
                                     <label for="sel1">Weight Category</label>
                                     <select id="sel1" class="form-control" type="text" name="weight_category"> 
+                                    <option>Select Weight Range</option>
                                         <?php $statement = $db->query('SELECT * FROM weight_category');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
-                                                echo '<option>Select Weight Range</option>';
                                                 echo '<option value="' . $row["weightID"] .'">' .  $row["category"] . '</option>';
                                                 }
                                         ?>
@@ -84,11 +84,11 @@ else {
 
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Fitness Goal">
                                     <label for="sel2">Fitness Goal</label>
-                                    <select id="sel1" class="form-control" type="text" name="weight_category"> 
+                                    <select id="sel1" class="form-control" type="text" name="weight_category">
+                                    <option>Choose Goal</option>
                                         <?php $statement = $db->query('SELECT * FROM goals');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
-                                                echo '<option>Choose Goal</option>';
                                                 echo '<option value="' . $row["goals_id"] .'">' .  $row["goal"] . '</option>';
                                                 }
                                         ?>
