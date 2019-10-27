@@ -13,10 +13,6 @@ if (isset($_POST['firstName']))
 $stmt = $db->prepare('INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
 $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':email' => $email, ':password' => $pass));
 }
-// $_POST['lastName'];
-// $_POST['email'];
-// $_POST['pass'];)
-
 
 ?>
 
