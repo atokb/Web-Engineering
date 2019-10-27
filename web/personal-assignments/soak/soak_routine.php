@@ -58,7 +58,13 @@ include 'db.php';
 						Here is Your Current Royal Routine
 					</span>
 					<span class="login100-form-title p-b-48">
-						<i class="zmdi zmdi-font"></i>
+						<i class="zmdi zmdi-font">
+              <?php $statement = $db->query('SELECT * FROM routines');
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                {
+                echo '<h2>' . $row["routine_id"] . $row["routine_name"] .'</h2>' .  '<p>' . $row["routine_instructions"] . '</p>';
+                }
+              ?></i>
           </span>
           
 
