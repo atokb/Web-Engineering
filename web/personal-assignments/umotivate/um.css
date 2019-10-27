@@ -37,3 +37,20 @@ select {
     border-radius: 10%;
     background: rgb(66, 184, 221)
 }
+
+@media screen and (min-width: 900px) {
+    #main {
+        margin: 0 auto;
+        margin-top: 10%;
+        text-align: center;
+        width: 200px;
+    }
+    #finalResult {
+        margin: 0 auto;
+        margin-top: 10%;
+        text-align: center;
+        font-size: 2rem;
+        background-color: #000000;
+        color: #ecd138;
+    }
+}
