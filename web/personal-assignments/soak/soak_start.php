@@ -83,11 +83,13 @@ else {
 
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Fitness Goal">
                                     <label for="sel2">Fitness Goal</label>
-                                    <select id="sel2" class="form-control" type="text" name="goal">
-                                        <option value="goal">Choose a Fitness Goal</option>
-                                        <option value="healthy_living">Healthy Living</option>
-                                        <option value="body_building">Body Building</option>
-                                        <option value="weight_loss">Weight Loss</option>
+                                    <select id="sel1" class="form-control" type="text" name="weight_category"> 
+                                        <?php $statement = $db->query('SELECT * FROM goals');
+                                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                                                {
+                                                echo '<option value="' . $row["goals_id"] .'">' .  $row["goal"] . '</option>';
+                                                }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
