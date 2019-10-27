@@ -75,6 +75,7 @@ else {
                                         <?php $statement = $db->query('SELECT * FROM weight_category');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
+                                                echo '<option>Select Weight Range</option>';
                                                 echo '<option value="' . $row["weightID"] .'">' .  $row["category"] . '</option>';
                                                 }
                                         ?>
@@ -87,6 +88,7 @@ else {
                                         <?php $statement = $db->query('SELECT * FROM goals');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
+                                                echo '<option>Choose Goal</option>';
                                                 echo '<option value="' . $row["goals_id"] .'">' .  $row["goal"] . '</option>';
                                                 }
                                         ?>
