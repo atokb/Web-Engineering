@@ -72,7 +72,7 @@ else {
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Weight Category">
                                     <label for="sel1">Weight Category</label>
                                     <select id="sel1" class="form-control" type="text" name="weight_category"> 
-                                    <option value="Select Weight Range" disabled>Select Weight Range</option>
+                                    <option value="Select Weight Range" selected disabled>Select Weight Range</option>
                                         <?php $statement = $db->query('SELECT * FROM weight_category');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
@@ -85,7 +85,7 @@ else {
                                 <div class="wrap-input100 validate-input" data-validate = "Select a Fitness Goal">
                                     <label for="sel2">Fitness Goal</label>
                                     <select id="sel1" class="form-control" type="text" name="weight_category">
-                                    <option value="Choose Goal" disabled>Choose Goal</option>
+                                    <option value="Choose Goal" selected disabled>Choose Goal</option>
                                         <?php $statement = $db->query('SELECT * FROM goals');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                                 {
