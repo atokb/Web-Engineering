@@ -57,7 +57,7 @@ include 'db.php';
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<input class="login100-form-btn" type="submit" name="submit" value="Login">
+							<button class="login100-form-btn" type="submit" name="submit" value="Login"></button>
 						</div>
 					</div>
 
