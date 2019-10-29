@@ -17,17 +17,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $row) {
     if (password_verify($pass, $row['password'])) {
         $_SESSION['email'] = $email;
-        
-    }
-    else {
         header('Location: soak.php');
-    }
-}
+        }
+    else {
+        $message = "Wrong Username or password";
+        header('Location: soak.php');
+        }
 }
 
-else {
-    header('Location: soak.php');
-}
+
 
 ?>
 
