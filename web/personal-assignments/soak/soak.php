@@ -33,7 +33,7 @@ include 'db.php';
   <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="soak_start.php">
+				<form class="login100-form validate-form" method="POST" action="soak_start.php" id="loginForm">
 					<span class="login100-form-title p-b-26">
 						Login Here
 					</span>
@@ -57,7 +57,7 @@ include 'db.php';
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<input class="login100-form-btn" type="submit" value="Login">
+							<button class="login100-form-btn" type="submit" form="LoginForm">Login</button>
 						</div>
 					</div>
 
