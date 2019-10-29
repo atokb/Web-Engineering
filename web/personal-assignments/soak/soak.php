@@ -5,6 +5,30 @@ session_start();
 
 include 'db.php';
 
+if (isset($_POST['email']))
+{
+	$email = $_POST['email'];
+	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+
+$stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email');
+$stmt->execute(array(':email' => $email));
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($rows as $row) {
+    if (password_verify($pass, $row['password'])) {
+        $_SESSION['email'] = $email;
+    }
+    else {
+        header('Location: soak.php');
+    }
+}
+}
+
+else {
+    $message = "Wrong Username or password";
+    header('Location: soak.php');
+}
+
 ?>
 
 <!DOCTYPE html>
