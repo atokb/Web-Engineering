@@ -8,10 +8,22 @@ if (isset($_POST['firstName']))
 	$firstname = $_POST['firstName'];
 	$lastname = $_POST['lastName'];
 	$email = $_POST['email'];
-	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+	$password = $_POST['password'];
 
+	$pass = password_hash($password, PASSWORD_DEFAULT);
+
+try{
 $stmt = $db->prepare('INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
 $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':email' => $email, ':password' => $pass));
+
+if($stmt->rowCount() == 1){
+	$message = "Registration Successful<br>
+	Go to <a href='soak.php'>Login</a>
+	";
+}
+}
+catch(PDOException $ex){
+	$message = "An error occured".$ex->getMessage();
 }
 
 ?>
@@ -42,7 +54,8 @@ $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':e
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="post" action="soak.php">
+				<form class="login100-form validate-form" method="post" action="">
+				<span class="text-danger"><?php if(isset($message)) echo $message ?></span>
 					<span class="login100-form-title p-b-26">
 						Sign Up Here
 					</span>
@@ -69,7 +82,7 @@ $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':e
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="password">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 

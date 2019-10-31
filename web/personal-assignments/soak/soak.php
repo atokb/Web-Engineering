@@ -3,32 +3,10 @@ $currentPage = 'soak-home';
 
 session_start();
 
-include 'db.php';
+include_once 'db.php';
 
-if(isset($_POST["login"])) {
-    if(empty($_POST["email"]) || empty($_POST["pass"])) {
-		$message = '<label>All fields are required</label>';
-		echo 'we need them!';
-    }
-    else{
-        $query = "SELECT * FROM users WHERE email = :email AND pass = :password";
-        $statement = $connect->prepate($query);
-        $statement->execute(
-            array(
-                'email' => $_POST["email"],
-                'pass' => $_POST["password"]
-            )
-            );
-            $count = $statement->rowCount();
-            if(count > 0){
-                $_SESSION["email"] = $_POST["email"];
-                header("location: soak_start.php");
-            }
-            else{
-                $message = "Invalid Email or Password";
-            }
-    }
-}
+if(isset($_POST['email'])) {
+
 
 ?>
 
@@ -58,7 +36,7 @@ if(isset($_POST["login"])) {
   <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST">
+				<form class="login100-form validate-form" method="POST" action="">
 					<span class="login100-form-title p-b-26">
 						Login Here
 					</span>
@@ -84,15 +62,15 @@ if(isset($_POST["login"])) {
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
-						<input class="btn btn-info" type="submit" name="login" value="Login">
+						<!-- <input class="btn btn-info" type="submit" name="login" value="Login"> -->
 
-<!-- 
+
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn" type="submit" name="login">Login</button>
 						</div>
-					</div> -->
+					</div>
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
