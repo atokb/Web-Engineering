@@ -84,9 +84,8 @@ if(isset($_POST["login"])) {
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
 						<input class="btn btn-info" type="submit" name="login" value="Login">
-					</div>
+
 <!-- 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
