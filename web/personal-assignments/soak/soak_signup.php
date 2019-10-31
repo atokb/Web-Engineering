@@ -23,7 +23,7 @@ if($stmt->rowCount() == 1){
 }
 }
 catch(PDOException $ex){
-	$message = "An error occured".$ex->getMessage();
+	$erMessage = "An error occured".$ex->getMessage();
 }
 }
 
@@ -58,9 +58,13 @@ catch(PDOException $ex){
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="post" action="">
-				<span class="text-danger">
+				<span class="text-success">
 					<?php if(isset($message)) echo $message ?>
 				</span>
+				<span class="text-danger">
+					<?php if(isset($erMessage)) echo $erMessage ?>
+				</span>
+				<br>
 					<span class="login100-form-title p-b-26">
 						Sign Up Here
 					</span>
