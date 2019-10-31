@@ -7,7 +7,8 @@ include 'db.php';
 
 if(isset($_POST["login"])) {
     if(empty($_POST["email"]) || empty($_POST["pass"])) {
-        $message = '<label>All fields are required</label>';
+		$message = '<label>All fields are required</label>';
+		echo 'we need them!';
     }
     else{
         $query = "SELECT * FROM users WHERE email = :email AND pass = :password";
