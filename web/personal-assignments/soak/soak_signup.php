@@ -25,6 +25,7 @@ if($stmt->rowCount() == 1){
 catch(PDOException $ex){
 	$message = "An error occured".$ex->getMessage();
 }
+}
 
 ?>
 
@@ -45,7 +46,9 @@ catch(PDOException $ex){
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link <?php if($currentPage == 'soak-home') echo 'bg-info'; ?>" href="soak.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link <?php if($currentPage == 'soak-home') echo 'bg-info'; ?>" href="soak.php">Home 
+			<span class="sr-only">(current)</span>
+		</a>
       </li>
     </ul>
   </div>
@@ -55,7 +58,9 @@ catch(PDOException $ex){
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="post" action="">
-				<span class="text-danger"><?php if(isset($message)) echo $message ?></span>
+				<span class="text-danger">
+					<?php if(isset($message)) echo $message ?>
+				</span>
 					<span class="login100-form-title p-b-26">
 						Sign Up Here
 					</span>
@@ -63,12 +68,12 @@ catch(PDOException $ex){
 						<i class="zmdi zmdi-font"></i>
 					</span>
 
-          <div class="wrap-input100 validate-input" data-validate = "Enter a valid name">
+          			<div class="wrap-input100 validate-input" data-validate = "Enter a valid name">
 						<input class="input100" type="text" name="firstName">
 						<span class="focus-input100" data-placeholder="First Name"></span>
 					</div>
 
-          <div class="wrap-input100 validate-input" data-validate = "Enter a valid name">
+          			<div class="wrap-input100 validate-input" data-validate = "Enter a valid name">
 						<input class="input100" type="text" name="lastName">
 						<span class="focus-input100" data-placeholder="Last Name"></span>
 					</div>
