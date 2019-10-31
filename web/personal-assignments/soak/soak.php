@@ -5,9 +5,6 @@ session_start();
 
 include_once 'db.php';
 
-if(isset($_POST['email'])) {
-
-
 ?>
 
 <!DOCTYPE html>
