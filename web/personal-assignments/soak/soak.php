@@ -5,6 +5,30 @@ session_start();
 
 include 'db.php';
 
+if(isset($_POST["login"])) {
+    if(empty($_POST["email"]) || empty($_POST["pass"])) {
+        $message = '<label>All fields are required</label>';
+    }
+    else{
+        $query = "SELECT * FROM users WHERE email = :email AND pass = :password";
+        $statement = $connect->prepate($query);
+        $statement->execute(
+            array(
+                'email' => $_POST["email"],
+                'pass' => $_POST["password"]
+            )
+            );
+            $count = $statement->rowCount();
+            if(count > 0){
+                $_SESSION["email"] = $_POST["email"];
+                header("location: soak_start.php");
+            }
+            else{
+                $message = "Invalid Email or Password";
+            }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +57,19 @@ include 'db.php';
   <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="soak_start.php" id="loginForm">
+				<form class="login100-form validate-form" method="POST">
 					<span class="login100-form-title p-b-26">
 						Login Here
 					</span>
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
 					</span>
-					<div class="message"><?php if($message!="") { echo $message; } ?></div>
+					<div class="message"><?php if(isset($message)) 
+					{
+						echo '<label class="text-danger">'.$message.'</label>'; 
+					}
+					?>
+						</div>
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email" required>
 						<span class="focus-input100" data-placeholder="Email"></span>
@@ -57,7 +86,7 @@ include 'db.php';
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" type="submit" name="submit">Login</button>
+							<button class="login100-form-btn" type="submit" name="login">Login</button>
 						</div>
 					</div>
 

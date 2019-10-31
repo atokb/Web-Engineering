@@ -11,6 +11,7 @@ try
   $dbUser = $dbOpts["user"];
   $dbPassword = $dbOpts["pass"];
   $dbName = ltrim($dbOpts["path"],'/');
+  $message = "";
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
@@ -18,7 +19,7 @@ try
 }
 catch (PDOException $ex)
 {
-  echo 'Error!: ' . $ex->getMessage();
+  $message = $ex->getMessage();
   die();
 }
 

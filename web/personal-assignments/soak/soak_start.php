@@ -5,34 +5,40 @@ $currentPage = 'soak-start';
 
 include 'db.php';
 
-if (isset($_POST['email']))
-{
-	$email = $_POST['email'];
-	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+// if (isset($_POST['Login']))
+// {
+// 	$email = $_POST['email'];
+// 	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-    $stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email');
-    $stmt->execute(array(':email' => $email));
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     $stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email');
+//     $stmt->execute(array(':email' => $email));
+//     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo 'They don\'t work';
+// echo 'They don\'t work';
 
-foreach ($rows as $row) {
-    if (password_verify($pass, $row['password'])) {
-        $_SESSION['email'] = $email;
-        echo 'here I work';
-    }
-    else {
-        header('Location: soak.php');
-        echo 'here I don\'t work, why?';
-    }
+// foreach ($rows as $row) {
+//     if (password_verify($pass, $row['password'])) {
+//         $_SESSION['email'] = $email;
+//         echo 'here I work';
+//     }
+//     else {
+//         header('Location: soak.php');
+//         echo 'here I don\'t work, why?';
+//     }
+// }
+// }
+
+// else {
+//     $message = "Wrong Username or password";
+//     header('Location: soak.php');
+// }
+
+if(isset($_SESSION["email"])){
+    $Welcome = 'Welcome - '.$_SESSION["email"];
 }
+else{
+    header("location:soak.php");
 }
-
-else {
-    $message = "Wrong Username or password";
-    header('Location: soak.php');
-}
-
 
 ?>
 
