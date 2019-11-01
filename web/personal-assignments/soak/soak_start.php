@@ -30,7 +30,7 @@ if (isset($_POST['login']))
 // }
 
 if($stmt->rowCount() > 0) {
-    $_SESSION['email'] = $user;
+    $_SESSION['email'] = $email;
     header('location:soak_start.php');
 }else
 {
