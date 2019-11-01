@@ -14,32 +14,28 @@ if (isset($_POST['Login']))
     $stmt->execute(array(':email' => $email));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo 'They don\'t work';
+// foreach ($rows as $row) {
+//     if (password_verify($pass, $row['password'])) {
+//         $_SESSION['email'] = $email;
+//     }
+//     else {
+//         header('Location: soak.php');
+//     }
+// }
+// }
 
-foreach ($rows as $row) {
-    if (password_verify($pass, $row['password'])) {
-        $_SESSION['email'] = $email;
-        echo 'here I work';
-    }
-    else {
-        header('Location: soak.php');
-        echo 'here I don\'t work, why?';
-    }
-}
-}
-
-else {
-    $message = "Wrong Username or password";
-    header('Location: soak.php');
-}
+// else {
+//     $message = "Wrong Username or password";
+//     header('Location: soak.php');
+// }
 
 if(isset($_SESSION["email"])){
     $Welcome = 'Welcome - '.$_SESSION["email"];
-}
-else{
     header("location: soak_start.php");
 }
-
+else{
+    header("location: soak.php");
+}
 
 ?>
 
