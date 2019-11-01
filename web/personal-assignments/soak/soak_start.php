@@ -62,7 +62,7 @@ if(isset($_POST['login'])) {
         }
         else 
         {
-            header('location:soak.php')
+            header('location:soak.php');
         }
     }
 }
