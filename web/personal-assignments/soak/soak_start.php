@@ -65,9 +65,9 @@ foreach ($rows as $row) {
                             <div>
                                 <h6>Select your Current Status to Proceed</h6>
                                 <div></div>
-                                <div class="wrap-input100 validate-input" data-validate = "Select a Weight Category">
+                                <div class="wrap-input100 validate-input" data-validate="Select a Weight Category">
                                     <label for="sel1">Weight Category</label>
-                                    <select id="sel1" class="form-control" type="text" name="weight_category"> 
+                                    <select id="sel1" class="form-control" type="text" name="weight_category" required> 
                                     <option value="Select Weight Range" selected disabled>Select Weight Range</option>
                                         <?php $statement = $db->query('SELECT * FROM weight_category');
                                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -78,7 +78,7 @@ foreach ($rows as $row) {
                                     </select>
                                 </div>
 
-                                <div class="wrap-input100 validate-input" data-validate = "Select a Fitness Goal">
+                                <div class="wrap-input100 validate-input" data-validate="Select a Fitness Goal" required>
                                     <label for="sel2">Fitness Goal</label>
                                     <select id="sel1" class="form-control" type="text" name="weight_category">
                                     <option value="Choose Goal" selected disabled>Choose Goal</option>
