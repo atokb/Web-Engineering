@@ -19,14 +19,14 @@ foreach ($rows as $row) {
         $_SESSION['email'] = $email;
     }
     else {
-        header('Location: soak_start.php');
+        header('location: soak_start.php');
     }
 }
 }
 
 else {
     $message = "Wrong Username or password";
-    header('Location: soak.php');
+    header('location: soak_start.php');
 }
 
 // if(isset($_SESSION["email"])){
