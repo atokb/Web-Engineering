@@ -3,7 +3,36 @@ $currentPage = 'soak-home';
 
 session_start();
 
+if(!empty($_SESSION['email'])) {
+	header('location:soak-start.php');
+	}
+
 include_once 'db.php';
+
+if(isset($_POST['login'])) {
+
+	$user = $_POST['email'];
+	$pass = $_POST['pass'];
+	
+	if(empty($email) || empty($pass)) {
+	$message = 'All field are required';
+	} else {
+	$query = $conn->prepare("SELECT email, password FROM users WHERE 
+	email=? AND password=? ");
+	$query->execute(array($email,$pass));
+	$row = $query->fetch(PDO::FETCH_BOTH);
+	
+	if($query->rowCount() > 0) {
+	  $_SESSION['email'] = $email;
+	  header('location:soak-start.php');
+	} else {
+	  $message = "Invalid Email or Password";
+	}
+	
+	
+	}
+	
+	}
 
 ?>
 
