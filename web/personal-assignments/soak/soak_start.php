@@ -5,9 +5,9 @@ $currentPage = 'soak-start';
 
 include 'db.php';
 
-if (isset($_POST['Login']))
+if (isset($_POST['login']))
 {
-	$email = $_POST['email'];
+	$email = !empty($_POST['email']) ? trim($_POST['email']) : null;
 	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
     $stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email');
@@ -24,19 +24,6 @@ foreach ($rows as $row) {
     }
 }
 }
-
-// else {
-//     $message = "Wrong Username or password";
-//     header('location: soak.php');
-// }
-
-// if(isset($_SESSION["email"])){
-//     $Welcome = 'Welcome - '.$_SESSION["email"];
-//     header("location: soak_start.php");
-// }
-// else{
-//     header("location: soak.php");
-// }
 
 ?>
 
