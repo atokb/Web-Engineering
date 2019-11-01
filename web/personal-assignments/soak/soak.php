@@ -33,7 +33,7 @@ include_once 'db.php';
   <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="">
+				<form class="login100-form validate-form" method="POST" action="soak_start.php">
 					<span class="login100-form-title p-b-26">
 						Login Here
 					</span>
