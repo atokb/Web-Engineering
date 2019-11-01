@@ -3,10 +3,6 @@ $currentPage = 'soak-home';
 
 session_start();
 
-if(!empty($_SESSION['email'])) {
-	header('location:soak-start.php');
-	}
-
 include_once 'db.php';
 
 if(isset($_POST['login'])) {
@@ -27,6 +23,7 @@ if(isset($_POST['login'])) {
 	  header('location:soak-start.php');
 	} else {
 	  $message = "Invalid Email or Password";
+	  header('location:soak.php')
 	}
 	
 	

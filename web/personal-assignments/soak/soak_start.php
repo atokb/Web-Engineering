@@ -3,25 +3,39 @@ session_start();
 
 $currentPage = 'soak-start';
 
+if(!empty($_SESSION['email'])) {
+	header('location:soak-start.php');
+	}
+
+
 include 'db.php';
 
 if (isset($_POST['login']))
 {
-	$email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+	$email = !empty($_POST['email']);
 	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-    $stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email');
-    $stmt->execute(array(':email' => $email));
+    $stmt = $db->prepare('SELECT email, password FROM users WHERE email=:email AND password=:password');
+    $stmt->execute(array(':email' => $email, ':password' => $pass));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($rows as $row) {
-    if (password_verify($pass, $row['password'])) {
-        $_SESSION['email'] = $email;
-        header('location: soak_start.php');
-    }
-    else {
-        header('location: soak.php');
-    }
+// foreach ($rows as $row) {
+//     if (password_verify($pass, $row['password'])) {
+//         $_SESSION['email'] = $email;
+//         header('location: soak_start.php');
+//     }
+//     else {
+//         header('location: soak.php');
+//     }
+// }
+
+if($stmt->rowCount() > 0) {
+    $_SESSION['email'] = $user;
+    header('location:soak_start.php');
+}else
+{
+    $message="Invalid email or password";
+    header('location:soak.php')
 }
 }
 
