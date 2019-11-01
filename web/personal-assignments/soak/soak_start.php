@@ -17,17 +17,18 @@ if (isset($_POST['Login']))
 foreach ($rows as $row) {
     if (password_verify($pass, $row['password'])) {
         $_SESSION['email'] = $email;
+        header('location: soak_start.php');
     }
     else {
-        header('location: soak_start.php');
+        header('location: soak.php');
     }
 }
 }
 
-else {
-    $message = "Wrong Username or password";
-    header('location: soak_start.php');
-}
+// else {
+//     $message = "Wrong Username or password";
+//     header('location: soak.php');
+// }
 
 // if(isset($_SESSION["email"])){
 //     $Welcome = 'Welcome - '.$_SESSION["email"];
