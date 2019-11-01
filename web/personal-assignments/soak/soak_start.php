@@ -33,11 +33,38 @@ include 'db.php';
 //     header('Location: soak.php');
 // }
 
-if(isset($_SESSION["email"])){
-    $Welcome = 'Welcome - '.$_SESSION["email"];
-}
-else{
-    header("location:soak.php");
+// if(isset($_SESSION["email"])){
+//     $Welcome = 'Welcome - '.$_SESSION["email"];
+// }
+// else{
+//     header("location: soak.php");
+// }
+
+if(isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if(empty($email)) {
+        $message = 'Email is required';
+    }
+    if(empty($password)) {
+        $message = 'Password is required';
+    }
+
+    if(count() == 0) {
+        $password = $pass;
+        $query = "SELECT * FROM users WHERE email ='$email' AND password = '$password'";
+        $results = mysqli_query($db, $query);
+
+        if(mysqli_num_results($results)) {
+            $_SESSION['email'] = $email;
+            header('location: soak_start.php');
+        }
+        else 
+        {
+            header('location:soak.php')
+        }
+    }
 }
 
 ?>

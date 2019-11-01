@@ -16,8 +16,10 @@ try{
 $stmt = $db->prepare('INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
 $stmt->execute(array(':first_name' => $firstname, ':last_name' => $lastname, ':email' => $email, ':password' => $pass));
 
+
+
 if($stmt->rowCount() == 1){
-	$message = "Registration Successful<br>
+	$message = "Registration Successful<br><br>
 	Go to <a href='soak.php'>Login</a>
 	";
 }
