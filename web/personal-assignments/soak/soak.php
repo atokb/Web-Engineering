@@ -5,6 +5,7 @@ session_start();
 
 include_once 'db.php';
 
+$message = "";
 ?>
 
 <!DOCTYPE html>
