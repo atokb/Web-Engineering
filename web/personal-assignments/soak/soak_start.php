@@ -37,7 +37,7 @@ if(isset($_SESSION["email"])){
     $Welcome = 'Welcome - '.$_SESSION["email"];
 }
 else{
-    header("location: soak.php");
+    header("location: soak_start.php");
 }
 
 
