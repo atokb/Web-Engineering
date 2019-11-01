@@ -35,7 +35,7 @@ if($stmt->rowCount() > 0) {
 }else
 {
     $message="Invalid email or password";
-    header('location:soak.php')
+    header('location:soak.php');
 }
 }
 
