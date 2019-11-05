@@ -35,6 +35,7 @@ include 'db.php';
 					<span class="login100-form-title p-b-26">
 						Here is Your Current Royal Routine
 					</span>
+          <br>
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font">
               <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines');
