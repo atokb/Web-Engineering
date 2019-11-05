@@ -5,25 +5,25 @@ $currentPage = 'soak-start';
 
 include 'db.php';
 
-if (isset($_POST['login']))
-{
-	$email = !empty($_POST['email']);
-	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+// if (isset($_POST['login']))
+// {
+// 	$email = !empty($_POST['email']);
+// 	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-    $stmt = $db->prepare('SELECT * FROM users WHERE email=:email');
-    $stmt->execute(array(':email' => $email, ':password' => $pass));
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     $stmt = $db->prepare('SELECT * FROM users WHERE email=:email');
+//     $stmt->execute(array(':email' => $email, ':password' => $pass));
+//     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($rows as $row) {
-    if (password_verify($pass, $row['password'])) {
-        $_SESSION['email'] = $email;
-        header('location: soak_start.php');
-    }
-    else {
-        header('location: soak_start.php');
-    }
-}
-}
+// foreach ($rows as $row) {
+//     if (password_verify($pass, $row['password'])) {
+//         $_SESSION['email'] = $email;
+//         header('location: soak_start.php');
+//     }
+//     else {
+//         header('location: soak_start.php');
+//     }
+// }
+// }
 
 ?>
 
