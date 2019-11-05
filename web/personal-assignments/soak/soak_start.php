@@ -20,7 +20,7 @@ foreach ($rows as $row) {
         header('location: soak_start.php');
     }
     else {
-        header('location: soak.php');
+        header('location: soak_start.php');
     }
 }
 }
