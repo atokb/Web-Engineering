@@ -38,7 +38,7 @@ include 'db.php';
           <br>
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font">
-              <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines r JOIN users u ON r.routines_id = u.routines_id JOIN goals_weight_category gwc ON u.goals_weight_category_id = gwc.goals_weight_category');
+              <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines r JOIN users u ON r.routines_id = u.routines_id JOIN goals_weight_category gwc ON u.goals_weight_category_id = gwc.goals_weight_category WHERE r.routines_id = gwc.goals_weight_category_id');
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
                 echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p><br>';
