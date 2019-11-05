@@ -10,7 +10,7 @@ if (isset($_POST['login']))
 	$email = !empty($_POST['email']);
 	$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-    $stmt = $db->prepare('SELECT COUNT("id") FROM users WHERE email=:email AND password=:password');
+    $stmt = $db->prepare('SELECT * FROM users WHERE email=:email');
     $stmt->execute(array(':email' => $email, ':password' => $pass));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
