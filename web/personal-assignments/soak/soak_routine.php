@@ -31,7 +31,7 @@ include 'db.php';
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				<form class="login100-form validate-form" method="post" action="soak_start.php">
 					<span class="login100-form-title p-b-26">
 						Here is Your Current Royal Routine
 					</span>
@@ -45,7 +45,12 @@ include 'db.php';
                 }
               ?></i>
           </span>
-          
+          <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="submit" name="change">Change Goal</button>
+						</div>
+					</div>
 
 				</form>
 			</div>
