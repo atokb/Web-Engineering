@@ -40,7 +40,7 @@ include 'db.php';
               <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines');
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
-                echo '<h2> Routine<br> ' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p>';
+                echo '<h2> Routine<br> ' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p><br><br>';
                 }
               ?></i>
           </span>
