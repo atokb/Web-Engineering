@@ -76,20 +76,21 @@ catch(PDOException $ex){
 					</div>
 
                     <div class="form-group shadow-textarea">
-                        <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="3" placeholder="Instructions"></textarea>
+                        <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="8" placeholder="Instructions"></textarea>
                     </div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="custom-btn-bg"></div>
-							<button class="custom-btn">
+							<button type="submit" class="custom-btn">
 								Add Routine
                             </button>
 						</div>
                     </div>
+
                     <div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
-							<div class="custom-btn-bg"></div>
+							<div class="login100-form-bgbtn"></div>
                             <button class="login100-form-btn">
                                 <a href="soak_routine.php">Cancel</a>
 							</button>
