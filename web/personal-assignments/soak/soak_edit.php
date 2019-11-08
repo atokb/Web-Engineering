@@ -41,16 +41,21 @@ include 'db.php';
               <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines');
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
-                echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p><button class="btn-danger">Delete</button><br>';
+                echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '<div class="container-login100-form-btn">
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button class="btn-danger" type="" name="delete">Delete</button>
+                </div>
+            </div></p><br>';
                 }
               ?></i>
           </span>
           <div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" type="submit" name="update">Save Edits</button>
-						</div>
-					</div>
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button class="login100-form-btn" type="submit" name="update">Save Edits</button>
+                </div>
+            </div>
 
 				</form>
 			</div>
