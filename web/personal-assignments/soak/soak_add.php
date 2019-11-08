@@ -75,10 +75,9 @@ catch(PDOException $ex){
 						<span class="focus-input100" data-placeholder="Routine Name"></span>
 					</div>
 
-          			<div class="wrap-input100 validate-input">
-						<textarea class="input100" type="text" name="instructions">
-						<span class="focus-input100" data-placeholder="Instructions"></span>
-					</div>
+                    <div class="form-group shadow-textarea">
+                        <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="3" placeholder="Instructions"></textarea>
+                    </div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
