@@ -1,5 +1,5 @@
 <?php
-$currentPage = 'soak-start';
+$currentPage = 'soak-routine';
 
 include 'db.php';
 
@@ -13,7 +13,7 @@ include 'db.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
           <link rel="stylesheet" href="main.css">
-    <title>SOA-King - Start</title>
+    <title>SOA-King - Routine</title>
 </head>
 
 <body>
@@ -52,7 +52,8 @@ include 'db.php';
           </span>
           <div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
+              <div class="login100-form-bgbtn"></div>
+              <button class="login100-form-btn" type="submit" name="add"><a href="soak_add.php">Add Routine</a></button>
 							<button class="login100-form-btn" type="submit" name="change">Change Goal</button>
 						</div>
 					</div>
