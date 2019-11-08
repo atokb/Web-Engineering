@@ -44,7 +44,7 @@ include 'db.php';
                 echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '<div class="container-login100-form-btn">
                 <div class="wrap-login100-form-btn">
                     <div class="login100-form-bgbtn"></div>
-                    <button class="btn-danger" type="" name="delete">Delete</button>
+                    <button class="btn btn-danger btn-sm" type="" name="delete">Delete</button>
                 </div>
             </div></p><br>';
                 }
