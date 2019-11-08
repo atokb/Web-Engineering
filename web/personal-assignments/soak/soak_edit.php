@@ -41,12 +41,7 @@ include 'db.php';
               <?php $statement = $db->query('SELECT routine_name, routine_instructions FROM routines');
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
-                echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p> <div class="container-login100-form-btn">
-                <div class="wrap-login100-form-btn">
-                  <div class="login100-form-bgbtn"></div>
-                  <button class="login100-form-btn" name="edit"><a href="soak_edit.php">Edit Routine</a></button>
-                </div>
-              </div><br>';
+                echo '<h2>' . $row["routine_name"] .'</h2>' .  '<h4>Instructions</h4><p>' . $row["routine_instructions"] . '</p><br>';
                 }
               ?></i>
           </span>
