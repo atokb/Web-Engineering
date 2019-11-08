@@ -76,7 +76,7 @@ catch(PDOException $ex){
 					</div>
 
                     <div class="form-group shadow-textarea">
-						<span class="focus-input100">Instructions</span>
+						<span>Instructions</span>
                         <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="8"></textarea>
                     </div>
 
