@@ -52,8 +52,13 @@ include 'db.php';
           </span>
           <div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
+              <div class="custom-btn-bg"></div>
+              <button class="custom-btn" type="submit" name="add"><a href="soak_add.php">Add Routine</a></button>
+						</div>
+          </div>
+          <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn" type="submit" name="add"><a href="soak_add.php">Add Routine</a></button>
 							<button class="login100-form-btn" type="submit" name="change">Change Goal</button>
 						</div>
 					</div>

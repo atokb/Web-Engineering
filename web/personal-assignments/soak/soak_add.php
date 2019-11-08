@@ -76,7 +76,7 @@ catch(PDOException $ex){
 					</div>
 
           			<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="instructions">
+						<textarea class="input100" type="text" name="instructions">
 						<span class="focus-input100" data-placeholder="Instructions"></span>
 					</div>
 
@@ -86,6 +86,11 @@ catch(PDOException $ex){
 							<button class="custom-btn">
 								Add Routine
                             </button>
+						</div>
+                    </div>
+                    <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="custom-btn-bg"></div>
                             <button class="login100-form-btn">
                                 <a href="soak_routine.php">Cancel</a>
 							</button>
