@@ -71,13 +71,13 @@ catch(PDOException $ex){
 					</span>
 
           			<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="routineName">
+						<input class="input100" type="text" name="routineName" required>
 						<span class="focus-input100" data-placeholder="Routine Name"></span>
 					</div>
 
                     <div class="form-group shadow-textarea">
 						<span>Instructions</span>
-                        <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="8"></textarea>
+                        <textarea class="form-control z-depth-1" id="instructions" name="instructions" rows="8" required></textarea>
                     </div>
 
 					<div class="container-login100-form-btn">
